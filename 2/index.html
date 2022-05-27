@@ -1,0 +1,160 @@
+{
+    "git.ignoreLimitWarning": true
+}<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      img {
+        height: 100px;
+        object-fit: contain;
+      }
+      body {
+        background-image: url("https://wallpaperaccess.com/full/45656.jpg");
+      }
+      h1 {
+        font-size: 5em;
+        font-weight: bold;
+        color: rgba(235, 235, 235, 0.932);
+      }
+    </style>
+
+    <title>Atrapalos YA!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center pt-2 pb-2">PokeDex</h1>
+      <div id="pokedex" class="row"></div>
+      <button id="getMorePokemons" class="btn btn-light mt-3 mb-3" nextPageUrl="">
+        ¡Quiero ver más pokémon!
+      </button>
+    </div>
+
+    <!-- Modal PokemonData-->
+    <div
+      class="modal fade"
+      id="modalPokemon"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalPokemonLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalPokemonLabel"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Tipo: <ul id="pokemonType"></ul></p>
+            <p>Generaciones: <ul id="pokemonGenerations"></ul></p>
+            <p>Habilidades: <ul id="pokemonAbilities"></ul></p>
+            <p>5 Movimientos: <ul id="pokemonMoves"></ul></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Pokemon DamageRelation -->
+    <div
+      class="modal fade"
+      id="modalPokemonDamageRelation"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalPokemonDamageRelationLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalPokemonDamageRelationLabel"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Daño directo desde: <ul id="double_damage_from"></ul></p>
+            <p>Daño directo hacia: <ul id="double_damage_to"></ul></p>
+            <p>Daño medio desde: <ul id="half_damage_from"></ul></p>
+            <p>Daño medio hacia: <ul id="half_damage_to"></ul></p>
+            <p>Sin daño desde: <ul id="no_damage_from"></ul></p>
+            <p>Sin daño hacia: <ul id="no_damage_to"></ul></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal get Other Pokemons -->
+    <div
+    class="modal fade"
+    id="modalGetOtherPokemons"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modalGetOtherPokemonsLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGetOtherPokemonsLabel"></h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Otros pokemones: <ul id="other-pokemons">
+
+          </ul></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
